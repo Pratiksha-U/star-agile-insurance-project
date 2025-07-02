@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: insurance-eta-container
-        image: tomjerryy/insurance-eta-app
+        image: tomjerryy/sa-ai-javaappbuildimg
         ports:
         - containerPort: 8080
 ---
