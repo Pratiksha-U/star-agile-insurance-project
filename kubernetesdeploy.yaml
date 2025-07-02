@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: insurance-eta-container
-        image: tomjerryy/sa-ai-javaappbuildimg
+        image: tomjerryy/insurance-eta-app
         ports:
-        - containerPort: 8080
+        - containerPort: 8082
 ---
 apiVersion: v1
 kind: Service
@@ -33,5 +33,5 @@ spec:
   type: NodePort
   ports:
   - nodePort: 31030
-    port: 8080
-    targetPort: 8080
+    port: 8082
+    targetPort: 8082
