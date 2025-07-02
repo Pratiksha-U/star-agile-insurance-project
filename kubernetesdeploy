@@ -15,7 +15,7 @@ spec:
         app: insurance-eta-app
     spec:
       containers:
-      - name: insure-me-container
+      - name: insurance-eta-container
         image: tomjerryy/insurance-eta-app
         ports:
         - containerPort: 8082
@@ -25,13 +25,13 @@ kind: Service
 metadata:
   name: insurance-eta-np-service
   labels:
-    app: insurance-eta-app
+    app: bank-eta-app
 spec:
   selector:
     app: insurance-eta-app
 
   type: NodePort
   ports:
-  - nodePort: 31030
+  - nodePort: 31031
     port: 8081
     targetPort: 8081
