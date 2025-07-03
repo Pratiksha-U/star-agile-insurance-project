@@ -14,6 +14,10 @@ spec:
       labels:
         app: insurance-eta-app
     spec:
+      tolerations:
+       - key: "node-role.kubernetes.io/control-plane"
+         operator: "Exists"
+         effect: "NoSchedule"
       containers:
       - name: insurance-eta-container
         image: tomjerryy/insurance-eta-app:latest
@@ -35,9 +39,5 @@ spec:
   - nodePort: 31030
     port: 8081
     targetPort: 8081
----
-tolerations:
-  - key: "node-role.kubernetes.io/control-plane"
-    operator: "Exists"
-    effect: "NoSchedule"
+
 
